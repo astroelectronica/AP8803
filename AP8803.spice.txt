@@ -25,7 +25,7 @@
 
 * based on work by Tim Wilson
 
-.subckt AL8803_SIMETRIX 10  26  13   20  18
+.subckt AL8803 10  26  13   20  18
 * pins-------------------1---2---3----4---5 
 *names                  SW  GND CTRL SET VIN
 
@@ -148,7 +148,7 @@ RS_S5      1 2 1G
 .MODEL     S5 VSWITCH Roff=10e6 Ron=1.0 Voff=251mV Von=249mV
 .ends AP_S5
 
-.ends AP8803_SIMETRIX
+.ends AP8803
 *
 *                (c)  2012 Diodes Inc
 *

@@ -1,0 +1,32 @@
+*LTspice
+*
+*AP8803
+*30V 1A BUCK LED DRIVER. XP-E white.
+*AE01003803
+*
+*netlist
+.include AP8803.cir
+*
+*params
+*
+.param VSOURCE=28
+.param VPUL=5
+.param RSET=0.18
+.param RCTRL=1K
+*
+.param FREQ=500
+.param PERCENT=80
+.param DELAY=0.5m
+.param REPEAT=2
+.param TR=100n
+.param TF=100n
+*
+.param CYCLE=1/FREQ
+.param X_BASE=(CYCLE*REPEAT)+DELAY
+.param DUTY=(PERCENT/100)*CYCLE
+*
+*transient response
+.tran 0 {X_BASE} 0 uic startup
+*
+*.backanno
+*.op
