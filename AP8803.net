@@ -9,9 +9,9 @@
 *
 *params
 *
-.param VSOURCE=28
-.param VPUL=5
-.param RSET=0.18
+.param VSOURCE=30
+.param VPUL=2.5
+.param RSET=0.5
 .param RCTRL=1K
 *
 .param FREQ=500
@@ -26,7 +26,7 @@
 .param DUTY=(PERCENT/100)*CYCLE
 *
 *transient response
-.tran 0 {X_BASE} 0 uic startup
+.tran 0 {X_BASE} 0 startup ;uic startup
 *
 *.backanno
 *.op
